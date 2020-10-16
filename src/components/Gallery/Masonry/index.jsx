@@ -2,8 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {arrayOf, func, object, node} from 'prop-types';
 import styled from 'styled-components';
 
-import useWindowSize from '../utils/useWindowSize';
-import useScroll from '../utils/useScroll';
+import {useWindowSize, useScroll} from '../utils';
 import calculateMasonry from './calculateMasonry';
 import getVisibleItems from './getVisibleItems';
 import renderItems from './renderItems';

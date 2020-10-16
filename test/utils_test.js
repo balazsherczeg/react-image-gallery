@@ -4,7 +4,7 @@ import {
   getRatio,
   getLargeEnoughSource,
   getLargestLoadedSource,
-} from '../src/data';
+} from '../src/components/Gallery/data';
 
 const item = {
   sources: {

@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import {arrayOf} from 'prop-types';
 
-import {itemPropType} from './data/propTypes';
-import Carrousel from './components/Carrousel';
-import Loading from './components/Loading';
-import ImageComponent from './components/Image';
-import Masonry from './components/Masonry';
-import Layout from './components/Layout';
+import {itemPropType} from './data';
+import Carrousel from './Carrousel';
+import Loading from './Loading';
+import ImageComponent from './Image';
+import Masonry from './Masonry';
+import Layout from './Layout';
 
-const Album = ({
+const Gallery = ({
   items,
 }) => {
   const [fullView, setFullView] = useState(null);
@@ -60,12 +60,12 @@ const Album = ({
   );
 };
 
-Album.propTypes = {
+Gallery.propTypes = {
   items: arrayOf(itemPropType),
 };
 
-Album.defaultProps = {
+Gallery.defaultProps = {
   items: null,
 };
 
-export default Album;
+export default Gallery;

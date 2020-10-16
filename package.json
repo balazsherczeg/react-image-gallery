@@ -1,5 +1,5 @@
 {
-  "name": "react-image-gallery",
+  "name": "react-masonry-gallery",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
@@ -30,5 +30,6 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "repository": "git://github.com/balazsherczeg/react-image-gallery.git"
 }

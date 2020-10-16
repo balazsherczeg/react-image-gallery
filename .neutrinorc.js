@@ -6,7 +6,7 @@ module.exports = {
   options: {
     root: __dirname,
     mains: {
-      index: 'index'
+      index: 'index',
     },
     useMains: true,
   },

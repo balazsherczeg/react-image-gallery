@@ -8,7 +8,7 @@ export const itemPropType = shape({
     height: number,
   })),
   meta: shape({
-    averageColor: string,
+    color: string,
     caption: string,
     date: string,
     location: string,

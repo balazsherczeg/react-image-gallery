@@ -70,12 +70,13 @@ const ImageComponent = ({
       className="VMG__Image__wrapper"
       style={{
         backgroundImage: tempImage ? `url(${tempImage})` : 'none',
+        ...(item.meta.color ? {backgroundColor: item.meta.color} : {}),
       }}
     >
       <Img
         className="VMG__Image"
         src={loadedSrc}
-        alt={item.id}
+        alt=""
         height={height}
         width={width}
       />

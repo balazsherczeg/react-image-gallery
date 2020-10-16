@@ -31,5 +31,5 @@
     "webpack-cli": "^3.3.12"
   },
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
-  "repository": "git://github.com/balazsherczeg/react-image-gallery.git"
+  "repository": "git://github.com/balazsherczeg/react-masonry-gallery.git"
 }

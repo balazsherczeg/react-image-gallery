@@ -1,11 +1,14 @@
 const airbnb = require('@neutrinojs/airbnb');
-const config = require('./neutrino.config');
+const preset = require('./neutrino.preset');
 const jest = require('@neutrinojs/jest');
 
 module.exports = {
   options: {
     root: __dirname,
-    mains: ['index'],
+    mains: {
+      index: 'index'
+    },
+    useMains: true,
   },
   use: [
     airbnb({
@@ -37,8 +40,8 @@ module.exports = {
         }
       }
     }),
-    config({
-      components: './',
+    preset({
+      components: '',
     }),
     jest(),
   ],

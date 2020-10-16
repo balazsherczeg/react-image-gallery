@@ -2,7 +2,8 @@ const react = require('@neutrinojs/react');
 const banner = require('@neutrinojs/banner');
 const merge = require('deepmerge');
 const nodeExternals = require('webpack-node-externals');
-const {join} = require('path');
+const { extname, join, basename } = require('path');
+const { readdirSync } = require('fs');
 
 module.exports = (opts = {}) => (neutrino) => {
   const options = merge(
@@ -34,17 +35,23 @@ module.exports = (opts = {}) => (neutrino) => {
       neutrino.use(react(options));
     },
     () => {
-      const components = join(
-        neutrino.options.source,
-        options.components,
-      );
+      if (!neutrino.options.useMains) {
+        const components = join(
+          neutrino.options.source,
+          neutrino.options.components ? neutrino.options.components : 'components',
+        );
 
-      Object.keys(neutrino.options.mains).forEach((key) => {
-        delete neutrino.options.mains[key]; // eslint-disable-line no-param-reassign
-      });
+        Object.keys(neutrino.options.mains).forEach((key) => {
+          delete neutrino.options.mains[key]; // eslint-disable-line no-param-reassign
+        });
 
-      // eslint-disable-next-line no-param-reassign
-      neutrino.options.mains.index = {entry: components};
+        readdirSync(components).forEach((component) => {
+          // eslint-disable-next-line no-param-reassign
+          neutrino.options.mains[basename(component, extname(component))] = {
+            entry: join(components, component),
+          };
+        });
+      }
 
       const pkg = neutrino.options.packageJson || {};
       const hasSourceMap =

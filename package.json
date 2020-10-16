@@ -2,7 +2,7 @@
   "name": "react-image-gallery",
   "version": "1.0.0",
   "description": "",
-  "main": "build/Gallery.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server --mode development --open",
@@ -10,6 +10,7 @@
     "lint": "eslint --cache --format codeframe --ext mjs,jsx,js src test"
   },
   "keywords": [],
+  "files": ["build"],
   "author": "",
   "license": "MIT",
   "dependencies": {

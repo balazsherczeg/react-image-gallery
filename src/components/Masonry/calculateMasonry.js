@@ -1,4 +1,4 @@
-import {getRatio} from '../data';
+import {getRatio} from '../../data';
 
 const MAX_COLUMN_WIDTH = 150;
 const GUTTER = 16;

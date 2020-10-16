@@ -2,7 +2,7 @@ import React from 'react';
 import {string} from 'prop-types';
 import styled from 'styled-components';
 
-import {itemPropType} from '../data';
+import {itemPropType} from '../../data';
 
 const Wrapper = styled.div`
   background-color: #fff;

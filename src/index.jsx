@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import {arrayOf} from 'prop-types';
 
 import {itemPropType} from './data';
-import Carrousel from './Carrousel';
-import Loading from './Loading';
-import ImageComponent from './Image';
-import Masonry from './Masonry';
-import Layout from './Layout';
+import Carrousel from './components/Carrousel';
+import Loading from './components/Loading';
+import ImageComponent from './components/Image';
+import Masonry from './components/Masonry';
+import Layout from './components/Layout';
 
 const Gallery = ({
   items,

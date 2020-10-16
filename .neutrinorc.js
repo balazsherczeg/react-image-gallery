@@ -1,10 +1,11 @@
 const airbnb = require('@neutrinojs/airbnb');
-const reactComponents = require('@neutrinojs/react-components');
+const config = require('./neutrino.config');
 const jest = require('@neutrinojs/jest');
 
 module.exports = {
   options: {
     root: __dirname,
+    mains: ['index'],
   },
   use: [
     airbnb({
@@ -36,26 +37,9 @@ module.exports = {
         }
       }
     }),
-    // (neutrino) => {
-    //   neutrino.config.module
-    //     .rule('test')
-    //       .use('babel')
-    //         .tap(options => merge(options, {
-    //           test: '/\.(js|jsx)$/',
-    //         }));
-    // },
-    reactComponents(),
+    config({
+      components: './',
+    }),
     jest(),
   ],
 };
-
-// module:{
-//         rules:[{
-//             loader: 'babel-loader',
-//             test: '/\.(js|jsx)$/',
-//             exclude: /node_modules/
-//         }]
-//     },
-// 
-// 
-// Config module rules on

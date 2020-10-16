@@ -2,7 +2,7 @@ import React, {useRef, useEffect, useState} from 'react';
 import {node} from 'prop-types';
 import styled from 'styled-components';
 
-import {getRatio, itemPropType} from '../data';
+import {getRatio, itemPropType} from '../../data';
 import {useWindowSize} from '../utils';
 
 const Container = styled.div`

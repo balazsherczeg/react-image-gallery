@@ -6,7 +6,7 @@ import {
   getLargeEnoughSource,
   getLargestLoadedSource,
   itemPropType,
-} from './data';
+} from '../data';
 
 const Wrapper = styled.div`
   background-color: #eee;

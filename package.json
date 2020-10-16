@@ -12,10 +12,12 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "prop-types": "^15.7.2",
     "react-transition-group": "^4.4.1",
     "styled-components": "^5.2.0",
+  },
+  "devDependencies": {
     "@neutrinojs/airbnb": "^9.4.0",
     "@neutrinojs/jest": "^9.4.0",
     "@neutrinojs/react-components": "^9.4.0",
